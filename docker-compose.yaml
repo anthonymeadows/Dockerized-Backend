@@ -1,0 +1,17 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: "password123"
+      POSTGRES_USER: "user123"
+      POSTGRES_DB: "db123"
+  app:
+    image: my-node-app
+    ports: 
+      - 1337:3000
+
+    # build image - sudo docker build -t "name" .
+    # check if worked with - docker images
+    # docker-compose up
+    # docker system prune (deletes all images to restart server)
