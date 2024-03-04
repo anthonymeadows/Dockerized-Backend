@@ -17,4 +17,53 @@ This repository contains a CRUD (Create, Read, Update, Delete) backend built usi
 2. Install dependencies
 ```cd your-repo```
 ```npm install```
-3. 
+
+## Instructions
+
+Follow these steps to set up and run the backend:
+
+### 1. Build Docker Image
+
+Run the following command to build the Docker image:
+
+```bash
+sudo docker build -t <image_name> .
+```
+
+Replace `<image_name>` with the desired name for your Docker image.
+
+### 2. Check Docker Images
+
+After building the image, you can verify it by running:
+
+```bash
+docker images
+```
+
+This command lists all Docker images on your system. Ensure that your newly built image is listed.
+
+### 3. Start Docker Containers
+
+Use Docker Compose to start the containers defined in the `docker-compose.yml` file:
+
+```bash
+docker-compose up
+```
+
+This command starts the Node.js Express backend and PostgreSQL database.
+
+### 4. (Optional) Prune Docker System
+
+To clean up Docker resources and restart the server fresh, you can run:
+
+```bash
+docker system prune
+```
+
+Be cautious when using this command as it deletes all unused data (containers, networks, volumes, and images).
+
+## Notes
+
+- Make sure to configure your Node.js application to connect to the PostgreSQL database using the provided environment variables.
+- Replace placeholders such as `<image_name>` in the commands with appropriate values.
+
