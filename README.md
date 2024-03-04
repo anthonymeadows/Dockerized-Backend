@@ -62,8 +62,13 @@ docker system prune
 
 Be cautious when using this command as it deletes all unused data (containers, networks, volumes, and images).
 
-## Notes
+### Additional Notes
+
+- If you want to see all containers, including those that are not currently running, you can use the following command:
+  ```bash
+  docker ps -a
+  ```
+  This command lists all containers on your system, including stopped ones.
 
 - Make sure to configure your Node.js application to connect to the PostgreSQL database using the provided environment variables.
 - Replace placeholders such as `<image_name>` in the commands with appropriate values.
-
